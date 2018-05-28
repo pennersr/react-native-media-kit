@@ -57,6 +57,7 @@ public class ReactMediaPlayerView extends FrameLayout implements LifecycleEventL
               mediaPlayerListener.onPlayerPaused();
             }
           case ExoPlayer.STATE_PREPARING:
+            measureAndLayout.run();
             mediaPlayerListener.onPlayerBuffering();
             break;
           case ExoPlayer.STATE_ENDED:
